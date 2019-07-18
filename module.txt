@@ -1,0 +1,9 @@
+{
+    "id" : "Market",
+    "version" : "0.1.0-SNAPSHOT",
+    "author" : "darshan3",
+    "displayName" : "Market",
+    "description" : "A module to add market where one can buy items in exchange for other items.",
+    "dependencies" : [],
+    "serverSideOnly" : false
+}
