@@ -103,15 +103,15 @@
                     "widget": "columnsHolder"
                   },
                   "position-horizontal-center": {}
-                },
-                "text": "Placeholder Item Name"
+                }
               },
               {
                 "type": "ItemIcon",
                 "id": "itemDisplayIcon",
                 "layoutInfo": {
-                  "height": 100,
-                  "weight": 100,
+                  "height": 50,
+                  "weight": 50,
+                  "use-content-width" : false,
                   "position-horizontal-center": {},
                   "position-top": {
                     "offset": 16,
