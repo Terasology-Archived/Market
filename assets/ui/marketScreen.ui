@@ -42,10 +42,26 @@
             "type": "RelativeLayout",
             "contents": [
               {
+                "type": "UILabel",
+                "id": "marketLabel",
+                "text": "Available Items",
+                "layoutInfo": {
+                  "use-content-height": true,
+                  "use-content-width": true,
+                  "position-top": {
+                    "offset": 16,
+                    "target": "TOP",
+                    "widget": "columnsHolder"
+                  },
+                  "position-horizontal-center": {}
+                }
+              },
+              {
                 "type": "ScrollableArea",
                 "layoutInfo": {
                   "position-top": {
-                    "target": "TOP"
+                    "target": "BOTTOM",
+                    "widget": "marketLabel"
                   },
                   "position-bottom": {
                     "target": "BOTTOM"
@@ -61,43 +77,11 @@
                 },
                 "contents": [
                   {
-                    "type": "UILabel",
-                    "id": "marketLabel",
-                    "text": "Available Items",
-                    "layoutInfo": {
-                      "use-content-height": true,
-                      "use-content-width": true,
-                      "position-top": {
-                        "offset": 16
-                      },
-                      "position-left": {
-                        "offset": 16
-                      },
-                      "position-right": {
-                        "offset": 16
-                      }
-                    }
-                  },
-                  {
                     "type": "FlowLayout",
                     "id": "marketItemList",
                     "layoutInfo": {
                       "use-content-height": false,
-                      "use-content-width": false,
-                      "position-top": {
-                        "offset": 8,
-                        "target": "BOTTOM",
-                        "widget": "marketLabel"
-                      },
-                      "position-left": {
-                        "offset": 16
-                      },
-                      "position-right": {
-                        "offset": 16
-                      },
-                      "position-bottom": {
-                        "offset": 16
-                      }
+                      "use-content-width": false
                     }
                   }
                 ]
@@ -108,68 +92,52 @@
             "type": "RelativeLayout",
             "contents": [
               {
+                "type": "UILabel",
+                "id": "itemName",
+                "layoutInfo": {
+                  "use-content-height": true,
+                  "use-content-width": true,
+                  "position-top": {
+                    "offset": 16,
+                    "target": "TOP",
+                    "widget": "columnsHolder"
+                  },
+                  "position-horizontal-center": {}
+                },
+                "text": "Placeholder Item Name"
+              },
+              {
+                "type": "ItemIcon",
+                "id": "itemDisplayIcon",
+                "layoutInfo": {
+                  "height": 100,
+                  "weight": 100,
+                  "position-horizontal-center": {},
+                  "position-top": {
+                    "offset": 16,
+                    "target": "BOTTOM",
+                    "widget": "itemName"
+                  }
+                }
+              },
+              {
                 "type": "ScrollableArea",
                 "id": "itemInfoPlaceholder",
                 "layoutInfo": {
                   "position-top": {
-                    "target": "TOP"
+                    "target": "BOTTOM",
+                    "widget": "itemDisplayIcon",
+                    "offset": 16
                   },
-                  "height": 400
+                  "height": 200
                 },
                 "contents": [
-                  {
-                    "type": "UILabel",
-                    "id": "itemName",
-                    "layoutInfo": {
-                      "use-content-height": true,
-                      "use-content-width": true,
-                      "position-top": {
-                        "offset": 8
-                      },
-                      "position-right": {
-                        "offset": 8
-                      },
-                      "position-left": {
-                        "offset": 8
-                      }
-                    }
-                  },
-                  {
-                    "type": "ItemIcon",
-                    "id": "itemDisplayIcon",
-                    "layoutInfo": {
-                      "use-content-height": false,
-                      "use-content-width": false,
-                      "position-top": {
-                        "offset": 16,
-                        "target": "BOTTOM",
-                        "widget": "itemName"
-                      },
-                      "position-right": {
-                        "offset": 16
-                      },
-                      "position-left": {
-                        "offset": 16
-                      }
-                    }
-                  },
                   {
                     "type": "UILabel",
                     "id": "itemDescription",
                     "layoutInfo": {
                       "use-content-height": true,
-                      "use-content-width": true,
-                      "position-right": {
-                        "offset": 8
-                      },
-                      "position-left": {
-                        "offset": 8
-                      },
-                      "position-top": {
-                        "offset": 16,
-                        "target": "BOTTOM",
-                        "widget": "itemDisplayIcon"
-                      }
+                      "use-content-width": true
                     }
                   }
                 ]
@@ -198,14 +166,10 @@
                   }
                 ]
               }
-            ],
-            "layoutInfo": {
-              "position-top": {
-                "target": "TOP"
-              }
-            }
+            ]
           }
-        ]
+        ],
+        "id": "columnsHolder"
       }
     ]
   }
