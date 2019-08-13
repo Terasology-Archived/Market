@@ -1,0 +1,176 @@
+{
+  "type": "Market:marketScreen",
+  "contents": {
+    "type": "relativeLayout",
+    "contents": [
+      {
+        "type": "UIBox",
+        "id": "container",
+        "layoutInfo": {
+          "width": 1016,
+          "position-horizontal-center": {},
+          "height": 500,
+          "position-vertical-center": {}
+        }
+      },
+      {
+        "type": "ColumnLayout",
+        "columns": 2,
+        "column-widths": [
+          0.7,
+          0.3
+        ],
+        "verticalSpacing": 16,
+        "horizontalSpacing": 8,
+        "layoutInfo": {
+          "width": 1000,
+          "use-content-height": true,
+          "position-horizontal-center": {},
+          "position-top": {
+            "target": "TOP",
+            "widget": "container",
+            "offset": 8
+          },
+          "position-bottom": {
+            "target": "BOTTOM",
+            "offset": 16,
+            "widget": "container"
+          }
+        },
+        "contents": [
+          {
+            "type": "RelativeLayout",
+            "contents": [
+              {
+                "type": "UILabel",
+                "id": "marketLabel",
+                "text": "Available Items",
+                "layoutInfo": {
+                  "use-content-height": true,
+                  "use-content-width": true,
+                  "position-top": {
+                    "offset": 16,
+                    "target": "TOP",
+                    "widget": "columnsHolder"
+                  },
+                  "position-horizontal-center": {}
+                }
+              },
+              {
+                "type": "ScrollableArea",
+                "layoutInfo": {
+                  "position-top": {
+                    "target": "BOTTOM",
+                    "widget": "marketLabel"
+                  },
+                  "position-bottom": {
+                    "target": "BOTTOM"
+                  },
+                  "use-content-width": false,
+                  "use-content-height": false,
+                  "position-left": {
+                    "target": "LEFT"
+                  },
+                  "position-right": {
+                    "target": "RIGHT"
+                  }
+                },
+                "contents": [
+                  {
+                    "type": "FlowLayout",
+                    "id": "marketItemList",
+                    "layoutInfo": {
+                      "use-content-height": false,
+                      "use-content-width": false
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "RelativeLayout",
+            "contents": [
+              {
+                "type": "UILabel",
+                "id": "itemName",
+                "layoutInfo": {
+                  "use-content-height": true,
+                  "use-content-width": true,
+                  "position-top": {
+                    "offset": 16,
+                    "target": "TOP",
+                    "widget": "columnsHolder"
+                  },
+                  "position-horizontal-center": {}
+                }
+              },
+              {
+                "type": "ItemIcon",
+                "id": "itemDisplayIcon",
+                "layoutInfo": {
+                  "height": 50,
+                  "weight": 50,
+                  "use-content-width" : false,
+                  "position-horizontal-center": {},
+                  "position-top": {
+                    "offset": 16,
+                    "target": "BOTTOM",
+                    "widget": "itemName"
+                  }
+                }
+              },
+              {
+                "type": "ScrollableArea",
+                "id": "itemInfoPlaceholder",
+                "layoutInfo": {
+                  "position-top": {
+                    "target": "BOTTOM",
+                    "widget": "itemDisplayIcon",
+                    "offset": 16
+                  },
+                  "height": 200
+                },
+                "contents": [
+                  {
+                    "type": "UILabel",
+                    "id": "itemDescription",
+                    "layoutInfo": {
+                      "use-content-height": true,
+                      "use-content-width": true
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "RelativeLayout",
+                "id": "buttonPlaceholder",
+                "layoutInfo": {
+                  "position-top": {
+                    "widget": "itemInfoPlaceholder",
+                    "target": "BOTTOM"
+                  },
+                  "position-bottom": {
+                    "target": "BOTTOM"
+                  }
+                },
+                "contents": [
+                  {
+                    "type": "UIButton",
+                    "id": "buyButton",
+                    "layoutInfo": {
+                      "position-vertical-center": {},
+                      "use-content-height": true
+                    },
+                    "text": "Buy"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "id": "columnsHolder"
+      }
+    ]
+  }
+}

@@ -4,6 +4,8 @@
     "author" : "darshan3",
     "displayName" : "Market",
     "description" : "A module to add market where one can buy items in exchange for other items.",
-    "dependencies" : [],
+    "dependencies" : [
+        {"id" : "Inventory", "minVersion" : "1.0.0"}
+    ],
     "serverSideOnly" : false
 }
